@@ -1,0 +1,7 @@
+trigger:
+  platform: webhook
+  webhook_id: !secret git-pull.webhookid
+#action:
+#  - service: hassio.addon_restart
+#    data:
+#      addon: core_git_pull

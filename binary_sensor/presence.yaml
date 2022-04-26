@@ -1,0 +1,42 @@
+- platform: template
+  sensors:
+    carsten_location_icon:
+      value_template: "{{ is_state('binary_sensor.carsten_presence','home') }}"
+      icon_template: "{{ 'mdi:home' if is_state('binary_sensor.carsten_presence','on') else ( 'mdi:run' if is_state('binary_sensor.carsten_presence','off') else 'mdi:crosshairs-question') }}"
+    daniela_location_icon:
+      value_template: "{{ is_state('binary_sensor.daniela_presence','home') }}"
+      icon_template: "{{ 'mdi:home' if is_state('binary_sensor.daniela_presence','on') else ( 'mdi:run' if is_state('binary_sensor.daniela_presence','off') else 'mdi:crosshairs-question') }}"
+
+- platform: bayesian
+  prior: 0.5
+  name: "Carsten presence"
+  device_class: presence
+  probability_threshold: 0.9
+  observations:
+    - entity_id: device_tracker.oneplus6
+      prob_given_true: 0.9
+      prob_given_false: 0.1
+      platform: state
+      to_state: home
+    - entity_id: device_tracker.oneplus_a6003
+      prob_given_true: 0.9
+      prob_given_false: 0.2
+      platform: state
+      to_state: home
+
+- platform: bayesian
+  prior: 0.5
+  name: "Daniela presence"
+  device_class: presence
+  probability_threshold: 0.9
+  observations:
+    - entity_id: device_tracker.iphone_daniela
+      prob_given_true: 0.9
+      prob_given_false: 0.1
+      platform: state
+      to_state: home
+    - entity_id: device_tracker.iphone
+      prob_given_true: 0.9
+      prob_given_false: 0.2
+      platform: state
+      to_state: home

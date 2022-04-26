@@ -1,0 +1,12 @@
+vacuum:
+  alias: "vacuum clean action"
+  sequence:
+    - service: python_script.vacuum
+      data_template:
+        input_boolean.living_room: "{{ states.input_boolean.clean_living_room.state }}"
+        input_boolean.bedroom: "{{ states.input_boolean.clean_bedroom.state }}"
+        input_boolean.office: "{{ states.input_boolean.clean_office.state }}"
+        input_boolean.kitchen: "{{ states.input_boolean.clean_kitchen.state }}"
+        input_boolean.bathroom: "{{ states.input_boolean.clean_bathroom.state }}"
+        input_boolean.hallway: "{{ states.input_boolean.clean_hallway.state }}"
+        input_boolean.hallway_small: "{{ states.input_boolean.clean_hallway_small.state }}"

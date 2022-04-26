@@ -1,0 +1,10 @@
+- url: /hacsfiles/lovelace-xiaomi-vacuum-card/xiaomi-vacuum-card.js
+  type: module
+- url: /hacsfiles/button-card/button-card.js
+  type: module
+- url: /hacsfiles/button-entity-row/button-entity-row.js
+  type: module
+- url: /hacsfiles/lovelace-multiple-entity-row/multiple-entity-row.js
+  type: module
+- url: /hacsfiles/vertical-stack-in-card/vertical-stack-in-card.js
+  type: module

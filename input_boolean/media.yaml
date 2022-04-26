@@ -1,0 +1,4 @@
+recently_playing:
+  name: "Recently playing"
+  initial: off
+  icon: mdi:play-pause

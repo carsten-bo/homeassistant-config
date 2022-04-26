@@ -1,0 +1,151 @@
+title: Home
+
+
+views:
+  - path: overview
+    title: Overview
+    cards:
+      - type: entities
+        entities:
+          - title: Carsten
+            entity: person.carsten
+            show_state: false
+            type: custom:multiple-entity-row
+            entities:
+              - entity: sensor.oneplus_a6003_battery_level
+                icon: false
+                name: false
+              - entity: sensor.oneplus_a6003_battery_level
+                icon: true
+                name: false
+              - entity: binary_sensor.carsten_location_icon
+                icon: true
+                name: false
+              # - entity: sensor.oneplus_a6003_geocoded_location
+              #   name: false
+          - title: Daniela
+            entity: person.daniela
+            show_state: false
+            type: custom:multiple-entity-row
+            entities:
+              - entity: sensor.iphone_battery_level
+                icon: false
+                name: false
+              - entity: sensor.iphone_battery_level
+                icon: true
+                name: false
+              - entity: binary_sensor.daniela_location_icon
+                icon: true
+                name: false
+              # - entity: sensor.iphone_geocoded_location
+              #   name: false
+              #  - entity: sensor.iphone_steps
+              #    name: false
+
+      - type: custom:vertical-stack-in-card
+        cards:
+          - type: custom:xiaomi-vacuum-card
+            entity: vacuum.xiaomi_vacuum_cleaner
+            image: false
+            name: Vacuum
+            vendor: xiaomi
+            buttons:
+              start: true
+              stop: true
+              locate: false
+          - type: entities
+            title: "Rooms"
+            show_header_toggle: true
+            entities:
+              - input_boolean.clean_living_room
+              - input_boolean.clean_bedroom
+              - input_boolean.clean_office
+              - input_boolean.clean_bathroom
+              - input_boolean.clean_kitchen
+              - input_boolean.clean_hallway
+              - input_boolean.clean_hallway_small
+
+          - type: button
+            name: "CLEAN!"
+            entity: script.vacuum
+            show_icon: false
+            tap_action:
+              action: call-service
+              service_data:
+                entity_id: script.vacuum
+              service: script.turn_on
+
+      # - type: history-graph
+      #   entities:
+      #     - entity: sensor.wohnzimmer_temperature
+      #       name: temp
+      #     - entity: sensor.wohnzimmer_heating
+      #       name: heating
+      #   name: Heating Living Room
+      # - type: history-graph
+      #   entities:
+      #     - entity: sensor.schlafzimmer_temperature
+      #       name: temp
+      #     - entity: sensor.schlafzimmer_heating
+      #       name: heating
+      #   name: Heating Bedroom
+      # - type: vertical-stack
+      #   cards:
+
+      - type: weather-forecast
+        entity: weather.home
+      - type: custom:vertical-stack-in-card
+        cards:
+          - type: horizontal-stack
+            cards:
+              - type: thermostat
+                entity: climate.schlafzimmer
+                name: Bedroom
+              - type: thermostat
+                entity: climate.bad
+                name: Bathroom
+          # - type: horizontal-stack
+          #   cards:
+              - type: thermostat
+                entity: climate.buro
+                name: Office
+              - type: thermostat
+                entity: climate.wohnzimmer
+                name: Living Room
+
+  - path: living_room
+    title: Living Room
+    cards:
+      - type: thermostat
+        entity: climate.wohnzimmer
+        name: Living Room
+      - type: button
+        name: Clean Room
+        tap_action:
+          action: call-service
+          service: script.living_room
+      - type: entities
+        entities:
+          - light.decke_buro
+          - light.decke_wohnzimmer
+          - light.hue_play_1
+          - light.hue_play_2
+          - light.kugel_1
+          - light.kugel_2
+          - light.leichtstreifen_wz
+          - light.leuchtstreifen_flur
+        title: Licht
+
+  - path: Locations
+    title: Locations
+    cards:
+      - type: map
+        entities:
+          - person.carsten
+          - person.daniela
+        hours_to_show: 48
+      - type: entity
+        entity: person.carsten
+        name: Carsten
+      - type: media-control
+        entity: media_player.echo_wz

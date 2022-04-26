@@ -1,0 +1,27 @@
+lights:
+  name: "lights"
+  entities:
+    - group.lights_living_room
+    - group.lights_office
+    - group.lights_bedroom
+
+lights_living_room:
+  name: "lights living room"
+  entities:
+    - light.leuchtstreifen_flur
+    - light.leichtstreifen_wz
+    - light.decke_wohnzimmer
+    - light.kugel_1
+    - light.kugel_2
+    - light.hue_play_1
+    - light.hue_play_2
+
+lights_bedroom:
+  name: "lights bedroom"
+  entities:
+    - light.decke_schlafzimmer
+
+lights_office:
+  name: "lights office"
+  entities:
+    - light.decke_buro

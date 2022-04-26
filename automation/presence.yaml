@@ -1,0 +1,80 @@
+- alias: carsten_home
+  description: "Notify when Carsten arrives at home"
+  trigger:
+    - entity_id: person.carsten
+      event: enter
+      platform: zone
+      zone: zone.home
+  condition: []
+  action:
+    service: notify.carsten
+    data_template:
+      message: >
+        Carsten arrived at home.
+      # data:
+      #   inline_keyboard:
+      #   - Task 1:/command1, Task 2:/command2
+      #   - Task 3:/command3, Task 4:/command4
+
+- alias: carsten_away
+  description: "Notify when Carsten leaves home"
+  trigger:
+    - entity_id: person.carsten
+      event: leave
+      platform: zone
+      zone: zone.home
+  condition: []
+  action:
+    service: notify.carsten
+    data_template:
+      message: >
+        {{ trigger.to_state.attributes.friendly_name }} has left
+
+
+- alias: daniela_home
+  description: "Notify when Daniela arrives at home"
+  trigger:
+    - entity_id: person.daniela
+      event: enter
+      platform: zone
+      zone: zone.home
+  condition: []
+  action:
+    - service: notify.carsten
+      data:
+        message: Daniela arrived at home.
+    - service: notify.daniela
+      data:
+        message: >
+          Hola mi vida! :heart:
+
+- alias: daniela_away
+  description: "Notify when Daniela leaves home"
+  trigger:
+    - entity_id: person.daniela
+      event: leave
+      platform: zone
+      zone: zone.home
+  condition: []
+  action:
+    - service: notify.carsten
+      data:
+        message: Daniela left home.
+    - service: notify.daniela
+      data:
+        message: >
+          Hasta luego! Tienes tu mascara y la bolsa?
+
+- alias: daniela_away_reminder
+  description: "Remind daniela to "
+  trigger:
+    - entity_id: person.daniela
+      event: leave
+      platform: zone
+      zone: zone.home
+  condition: []
+  action:
+    service: notify.daniela
+    data_template:
+      message: >
+        Hasta luego! Tienes tu mascara y la bolsa?

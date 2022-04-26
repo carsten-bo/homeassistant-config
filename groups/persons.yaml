@@ -1,0 +1,32 @@
+persons:
+  name: "People"
+  entities:
+    - group.carsten
+    - group.daniela
+
+everyone:
+  name: "everyone"
+  entities:
+    - group.carsten
+    - group.daniela
+  all: true
+
+anyone:
+  name: "anyone"
+  entities:
+    - group.carsten
+    - group.daniela
+
+carsten:
+  name: "Carsten"
+  entities:
+    - device_tracker.oneplus_a6003
+    - device_tracker.oneplus6
+  all: false
+
+daniela:
+  name: "Daniela"
+  entities:
+    - device_tracker.iphone
+    - device_tracker.iphone_daniela
+  all: false

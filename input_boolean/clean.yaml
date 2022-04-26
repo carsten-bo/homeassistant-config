@@ -1,0 +1,32 @@
+cleaned_today:
+  name: 'Cleaned today'
+  initial: off
+  icon: mdi:broom
+
+clean_living_room:
+  name: "Living room"
+  initial: off
+
+clean_bedroom:
+  name: "Bedroom"
+  initial: off
+
+clean_kitchen:
+  name: "Kitchen"
+  initial: off
+
+clean_office:
+  name: "Office"
+  initial: off
+
+clean_bathroom:
+  name: "Bathroom"
+  initial: off
+
+clean_hallway:
+  name: "Hallway"
+  initial: off
+
+clean_hallway_small:
+  name: "Small hallway"
+  initial: off
