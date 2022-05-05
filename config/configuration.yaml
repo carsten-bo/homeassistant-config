@@ -5,7 +5,6 @@ python_script:
 
 # Uncomment this if you are using SSL/TLS, running in Docker container, etc.
 http:
-  base_url: !secret http.baseurl
   use_x_forwarded_for: true
   trusted_proxies:
     - "192.168.178.57"
@@ -15,6 +14,7 @@ http:
 
 homeassistant:
   customize: !include customize.yaml
+  external_url: !secret http.external_url
 
 lovelace:
   mode: yaml
