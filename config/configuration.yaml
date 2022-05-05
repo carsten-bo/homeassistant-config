@@ -30,13 +30,6 @@ scene: !include scenes.yaml
 input_boolean: !include_dir_merge_named input_boolean/
 binary_sensor: !include_dir_merge_list binary_sensor/
 
-
-vacuum:
-  - platform: xiaomi_miio
-    host: !secret vacuum.token
-    token: !secret vacuum.token
-
-
 telegram_bot:
   - platform: polling
     api_key: !secret telegram.api_key
@@ -51,19 +44,6 @@ notify:
   - name: daniela
     platform: telegram
     chat_id: !secret telegram.daniela.id
-
-device_tracker:
-  - platform: fritz
-    host: !secret fritz.ip
-    password: !secret fritz.pw
-    new_device_defaults:
-      track_new_devices: false
-    consider_home: 60
-    interval_seconds: 25
-  - platform: tado
-    username: !secret tado.user
-    password: !secret tado.pw
-    home_id: 476475
 
 # Text to speech
 tts:
