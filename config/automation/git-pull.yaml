@@ -1,6 +1,6 @@
-trigger:
-  platform: webhook
-  webhook_id: !secret git-pull.webhookid
+# trigger:
+#   platform: webhook
+#   webhook_id: !secret git-pull.webhookid
 #action:
 #  - service: hassio.addon_restart
 #    data:
