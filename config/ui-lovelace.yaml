@@ -1,6 +1,4 @@
 title: Home
-
-
 views:
   - path: overview
     title: Overview
