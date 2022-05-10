@@ -19,7 +19,7 @@ homeassistant:
 
 lovelace:
   mode: yaml
-  resources: !include lovelace-resources.yaml
+  resources: !include dashboards/lovelace-resources.yaml
 
 logger:
   default: info
