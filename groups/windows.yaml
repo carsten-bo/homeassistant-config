@@ -1,0 +1,30 @@
+windows_all:
+  name: "windows"
+  entities:
+    - group.windows_living_room
+    - group.windows_bedroom
+    - group.windows_office
+    - group.windows_kitchen
+
+windows_living_room:
+  name: "windows living room"
+  entities:
+    - binary_sensor.fenster_wohnzimmer_rechts
+    - binary_sensor.fenster_wohnzimmer_links
+    - binary_sensor.balkontur_wohnzimmer
+
+windows_bedroom:
+  name: "windows bedroom"
+  entities:
+    - binary_sensor.fenster_schlafzimmer_rechts
+    - binary_sensor.fenster_schlafzimmer_links
+
+windows_office:
+  name: "windows office"
+  entities:
+    - binary_sensor.fenster_buro
+
+windows_kitchen:
+  name: "windows kitchen"
+  entities:
+    - binary_sensor.balkontur_kuche

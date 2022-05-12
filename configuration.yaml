@@ -19,7 +19,15 @@ homeassistant:
 
 lovelace:
   mode: yaml
-  resources: !include dashboards/lovelace-resources.yaml
+  resources: !include lovelace-resources.yaml
+  # Add yaml dashboards
+  dashboards:
+    lovelace-home:
+      mode: yaml
+      title: home
+      icon: mdi:home
+      show_in_sidebar: true
+      filename: dashboards/home.yaml
 
 logger:
   default: info
