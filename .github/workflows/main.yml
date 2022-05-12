@@ -15,4 +15,4 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Copy config to hass volume
-        run: sudo cp -r config/. /hass-volume/
+        run: cd config && git pull
