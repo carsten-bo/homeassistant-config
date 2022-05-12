@@ -3,75 +3,76 @@ views:
   - path: default_view
     title: HomeBoard
     cards:
+       
       - type: entities
         title: Doors and Windows
         state_color: true
         show_header_toggle: false
         entities:
-          - entity: group.windows_living_room
-            type: custom:multiple-entity-row
-            icon: mdi:window-open-variant
-            state_color: true
-            name: Living Room
-            secondary_info: last-updated
-            show_state: false
-            entities:
-              - entity: binary_sensor.fenster_wohnzimmer_rechts
-                name: window right
-                hide_if: "off"
-              - entity: binary_sensor.fenster_wohnzimmer_links
-                name: window left
-                hide_if: "off"
-              - entity: binary_sensor.balkontur_wohnzimmer
-                name: balcony door
-                hide_if: "off"
-          - entity: group.windows_bedroom
-            type: custom:multiple-entity-row
-            name: Bedroom
-            icon: mdi:window-open-variant
-            state_color: true
-            secondary_info: last-updated
-            show_state: false
-            entities:
-              - entity: binary_sensor.fenster_schlafzimmer_rechts
-                name: window right
-                hide_if: "off"
-              - entity: binary_sensor.fenster_schlafzimmer_links
-                name: window left
-                hide_if: "off"
-          - entity: group.windows_kitchen
-            type: custom:multiple-entity-row
-            name: Kitchen
-            icon: mdi:window-open-variant
-            state_color: true
-            secondary_info: last-updated
-            show_state: false
-            entities:
-              - entity: binary_sensor.balkontur_kuche
-                name: balcony
-                hide_if: "off"
-          - entity: group.windows_office
-            type: custom:multiple-entity-row
-            name: Office
-            icon: mdi:window-open-variant
-            state_color: true
-            secondary_info: last-updated
-            show_state: false
-            entities:
-              - entity: binary_sensor.fenster_buro
-                name: window
-                hide_if: "off"
-          - entity: group.doors_all
-            type: custom:multiple-entity-row
-            name: Doors
-            icon: mdi:door-open
-            state_color: true
-            secondary_info: last-updated
-            show_state: false
-            entities:
-              - entity: binary_sensor.tur_wohnung
-                name: door flat
-                hide_if: "off"
-              - entity: binary_sensor.tur_kammer
-                name: door chamber
-                hide_if: "off"
+        - entity: group.windows_living_room
+          type: custom:multiple-entity-row
+          icon: mdi:window-open-variant
+          state_color: true
+          name: Living Room
+          secondary_info: last-updated
+          show_state: false
+          entities:
+            - entity: binary_sensor.fenster_wohnzimmer_rechts
+              name: window right
+              hide_if: 'off'
+            - entity: binary_sensor.fenster_wohnzimmer_links
+              name: window left
+              hide_if: 'off'
+            - entity: binary_sensor.balkontur_wohnzimmer
+              name: balcony door
+              hide_if: 'off'
+        - entity: group.windows_bedroom
+          type: custom:multiple-entity-row
+          name: Bedroom
+          icon: mdi:window-open-variant
+          state_color: true
+          secondary_info: last-updated
+          show_state: false
+          entities:
+            - entity: binary_sensor.fenster_schlafzimmer_rechts
+              name: window right
+              hide_if: 'off'
+            - entity: binary_sensor.fenster_schlafzimmer_links     
+              name: window left
+              hide_if: 'off'
+        - entity: group.windows_kitchen
+          type: custom:multiple-entity-row
+          name: Kitchen
+          icon: mdi:window-open-variant
+          state_color: true          
+          secondary_info: last-updated
+          show_state: false
+          entities:
+            - entity: binary_sensor.balkontur_kuche
+              name: balcony
+              hide_if: 'off'
+        - entity: group.windows_office
+          type: custom:multiple-entity-row
+          name: Office
+          icon: mdi:window-open-variant
+          state_color: true
+          secondary_info: last-updated
+          show_state: false
+          entities:
+            - entity: binary_sensor.fenster_buro
+              name: window
+              hide_if: 'off'
+        - entity: group.doors_all
+          type: custom:multiple-entity-row
+          name: Doors
+          icon: mdi:door-open
+          state_color: true
+          secondary_info: last-updated
+          show_state: false
+          entities:
+            - entity: binary_sensor.tur_wohnung
+              name: door flat
+              hide_if: 'off'
+            - entity: binary_sensor.tur_kammer
+              name: door chamber
+              hide_if: 'off'

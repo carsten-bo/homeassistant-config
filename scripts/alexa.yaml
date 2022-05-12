@@ -1,0 +1,6 @@
+tts_alexa:
+  sequence:
+    - service: media_player.alexa_tts
+      data:
+        entity_id: media_player.echo_wz
+        message: "Hi, wie geht's dir?"

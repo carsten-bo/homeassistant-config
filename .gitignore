@@ -1,2 +1,21 @@
 **/secrets.yaml
 **/known_devices.yaml
+
+
+# Hass Files
+
+package-lock.json
+node_modules
+*.db*
+*.log*
+.vscode
+.storage
+.HA_VERSION
+emulated_hue_ids.json
+core
+www
+blueprints
+custom_components
+tts
+themes
+backups

@@ -1,0 +1,21 @@
+
+# - alias: Bedtime
+#   description: 'Turns off all lights except bedroom. Waits 30s then turns off bedroom'
+#   trigger:
+#   - device_id: a904c83c1bda475eb47ba0b8e3c68921
+#     domain: hue
+#     platform: device
+#     subtype: dim_down
+#     type: remote_button_long_release
+#   condition: []
+#   action:
+#   - service: light.turn_off
+#     data:
+#       entity_id: 
+#         - group.lights_living_room 
+#         - group.lights_office 
+#   - delay: '00:00:30'
+#   - service: light.turn_off
+#     data:
+#       entity_id: 
+#         - light.decke_schlafzimmer     
