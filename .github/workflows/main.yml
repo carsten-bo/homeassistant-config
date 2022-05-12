@@ -9,6 +9,9 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
+env:
+  GIT_SSH_COMMAND: 'ssh -i /hass-volume/.ssh/id_rsa -o IdentitiesOnly=yes'
+
 jobs:
   build:
     runs-on: [self-hosted, Linux, ARM64]
