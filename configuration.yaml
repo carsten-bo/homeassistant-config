@@ -13,6 +13,9 @@ http:
     - "10.42.0.0/24"
     - "10.42.1.0/24"
 
+prometheus:
+  namespace: hass
+
 homeassistant:
   customize: !include customize.yaml
   external_url: !secret http.external_url
