@@ -20,13 +20,11 @@ anyone:
 carsten:
   name: "Carsten"
   entities:
-    - device_tracker.oneplus_a6003
-    - device_tracker.oneplus6
+    - binary_sensor.carsten_presence
   all: false
 
 daniela:
   name: "Daniela"
   entities:
-    - device_tracker.iphone
-    - device_tracker.iphone_daniela_2
+    - binary_sensor.daniela_presence
   all: false
