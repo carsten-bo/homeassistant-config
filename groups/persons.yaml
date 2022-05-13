@@ -28,5 +28,5 @@ daniela:
   name: "Daniela"
   entities:
     - device_tracker.iphone
-    - device_tracker.iphone_daniela
+    - device_tracker.iphone_daniela_2
   all: false

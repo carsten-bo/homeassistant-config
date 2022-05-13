@@ -76,3 +76,11 @@ views:
             - entity: binary_sensor.tur_kammer
               name: door chamber
               hide_if: 'off'
+
+
+      - type: grid
+        square: false
+        columns: 1
+        cards:
+          - type: media-control
+            entity: media_player.xbox
