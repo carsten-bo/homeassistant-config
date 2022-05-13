@@ -187,6 +187,169 @@ views:
   - path: living_room
     title: Living Room
     cards:
+      - type: grid
+        square: false
+        columns: 1
+        cards:
+          - type: media-control
+            entity: media_player.xbox
+
+      - type: entities
+        entities:
+          - light.leuchtstreifen_flur
+          - light.kugel_2
+          - light.leichtstreifen_wz
+          - light.hue_play_1
+          - light.hue_play_2
+          - light.hue_filament_bulb_1
+          - light.hue_filament_bulb_2
+          - light.hue_filament_bulb_3
+          - light.kugel_1
+        title: Lights  
+        footer:
+          type: buttons
+          entities:
+            - entity: scene.wz_romantisch
+              show_icon: true
+              show_name: true
+              name: Romantisch
+            - entity: scene.wz_energie_tanken
+              show_icon: true
+              show_name: true
+              name: Energie tanken
+            - entity: scene.wz_lesen
+              show_icon: true
+              show_name: true
+              name: Lesen
+            - entity: scene.wz_buntgedimmt
+              show_icon: true
+              show_name: true
+              name: Buntgedimmt
+            - entity: scene.wz_nachtlicht_2
+              show_icon: true
+              show_name: true
+              name: Nachtlicht 2
+            - entity: scene.wz_leselicht
+              show_icon: true
+              show_name: true
+              name: Leselicht
+            - entity: scene.wz_backlights
+              show_icon: true
+              show_name: true
+              name: Backlights
+            - entity: scene.wz_farben
+              show_icon: true
+              show_name: true
+              name: Farben
+            - entity: scene.wz_geburtstag
+              show_icon: true
+              show_name: true
+              name: Geburtstag
+            - entity: scene.wz_hell
+              show_icon: true
+              show_name: true
+              name: Hell
+            - entity: scene.wz_sonnenuntergang_savanne
+              show_icon: true
+              show_name: true
+              name: Sonnenuntergang Savanne
+            - entity: scene.wz_essen
+              show_icon: true
+              show_name: true
+              name: Essen
+            - entity: scene.wz_tropendammerung
+              show_icon: true
+              show_name: true
+              name: Tropendämmerung
+            - entity: scene.wz_blautone
+              show_icon: true
+              show_name: true
+              name: Blautöne
+            - entity: scene.wz_daniela
+              show_icon: true
+              show_name: true
+              name: Daniela
+            - entity: scene.wz_sonne
+              show_icon: true
+              show_name: true
+              name: Sonne
+            - entity: scene.wz_leselicht_2
+              show_icon: true
+              show_name: true
+              name: Leselicht 2
+            - entity: scene.wz_leselicht_2_2
+              show_icon: true
+              show_name: true
+              name: Leselicht 2
+            - entity: scene.wz_entspannen
+              show_icon: true
+              show_name: true
+              name: Entspannen
+            - entity: scene.wz_chillen
+              show_icon: true
+              show_name: true
+              name: Chillen
+            - entity: scene.wz_gedimmt
+              show_icon: true
+              show_name: true
+              name: Gedimmt
+            - entity: scene.wz_nachtlicht
+              show_icon: true
+              show_name: true
+              name: Nachtlicht
+            - entity: scene.wz_rotgelb
+              show_icon: true
+              show_name: true
+              name: Rotgelb
+            - entity: scene.wz_fernsehabend
+              show_icon: true
+              show_name: true
+              name: Fernsehabend
+            - entity: scene.wz_nordlichter
+              show_icon: true
+              show_name: true
+              name: Nordlichter
+            - entity: scene.wz_herbstgold
+              show_icon: true
+              show_name: true
+              name: Herbstgold
+            - entity: scene.wz_lisa
+              show_icon: true
+              show_name: true
+              name: Lisa
+            - entity: scene.wz_rote_wand
+              show_icon: true
+              show_name: true
+              name: Rote Wand
+            - entity: scene.wz_nebel_uber_dem_see
+              show_icon: true
+              show_name: true
+              name: Nebel über dem See
+            - entity: scene.wz_fruhlingsbluten
+              show_icon: true
+              show_name: true
+              name: Frühlingsblüten
+            - entity: scene.wz_grun
+              show_icon: true
+              show_name: true
+              name: Grün
+            - entity: scene.wz_konzentrieren
+              show_icon: true
+              show_name: true
+              name: Konzentrieren
+            - entity: scene.wz_tv
+              show_icon: true
+              show_name: true
+              name: TV
+            - entity: scene.wz_rucklicht
+              show_icon: true
+              show_name: true
+              name: Rücklicht
+            - entity: scene.wz_lila
+              show_icon: true
+              show_name: true
+              name: Lila
+            
       - type: thermostat
         entity: climate.wohnzimmer
         name: Living Room
@@ -195,17 +358,6 @@ views:
         tap_action:
           action: call-service
           service: script.living_room
-      - type: entities
-        entities:
-          - light.decke_buro
-          - light.decke_wohnzimmer
-          - light.hue_play_1
-          - light.hue_play_2
-          - light.kugel_1
-          - light.kugel_2
-          - light.leichtstreifen_wz
-          - light.leuchtstreifen_flur
-        title: Licht
 
   - path: Locations
     title: Locations
