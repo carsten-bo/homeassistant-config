@@ -39,7 +39,15 @@ views:
               #   name: false
               #  - entity: sensor.iphone_steps
               #    name: false
-              
+       
+      - type: entities
+        entities:
+          - entity: switch.kaffeemaschine
+            icon: mdi:coffee-maker
+            name: Coffee Machine
+        state_color: true
+        title: Switches
+        
       - type: entities
         title: Doors and Windows
         state_color: true
