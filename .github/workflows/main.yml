@@ -19,6 +19,7 @@ jobs:
       - name: Pull config repo
         run: |
           git config --global --add safe.directory /hass-volume
+          mkdir -p /root/.ssh
           ssh-keygen -F github.com || ssh-keyscan github.com >> /root/.ssh/known_hosts
           cd /hass-volume
           git pull
