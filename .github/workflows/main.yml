@@ -20,6 +20,6 @@ jobs:
         run: |
           git config --global --add safe.directory /hass-volume
           sudo mkdir -p /root/.ssh
-          ssh-keygen -F github.com || ssh-keyscan github.com >> /root/.ssh/known_hosts
+          sudo ssh-keygen -F github.com || ssh-keyscan github.com >> /root/.ssh/known_hosts
           cd /hass-volume
           git pull
