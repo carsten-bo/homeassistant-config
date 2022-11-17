@@ -45,6 +45,9 @@ views:
           - entity: switch.kaffeemaschine
             icon: mdi:coffee-maker
             name: Coffee Machine
+          - entity: switch.on_off_plug_in_unit_5
+            icon: mdi:white-balance-sunny
+            name: Daylight Lamp Office       
         state_color: true
         title: Switches
         
